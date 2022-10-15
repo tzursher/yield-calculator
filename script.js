@@ -30,7 +30,7 @@ function calc() {
     console.log(newResult);
   }
   yieldResultText.innerText = Math.floor((newResult/amountNum-1) * 100)+"%";
-  balanceResultText.innerText = Intl.NumberFormat('en-US').format(Math.round(newResult-amountNum))+"$";
+  balanceResultText.innerText = Intl.NumberFormat('en-US').format(Math.round(newResult-amountNum))+"ִִִ₪";
  
 };
 
