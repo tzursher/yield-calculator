@@ -1,3 +1,9 @@
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  box-sizing: border-box;
+}
+
 body {
     width:100%;
     height:100vh;
@@ -7,18 +13,28 @@ body {
     gap: 24px;
     align-items: center;
     justify-content: center;
-    font-family:"Montserrat", sans-serif;
+    font-family:'Noto Sans Hebrew', sans-serif;
+    direction: rtl;
 }
   
   .calc-container {
-   display:flex;
+    display:flex;
     flex-direction:column;
     gap:16px;
     padding:32px;
     background:white;
     border-radius:16px;
     box-shadow: 4px 0px 40px rgba(0,0,0,.28);
-    width:400px;
+    width:320px;
+   
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .calc-container {
+      width: 90vw;
+    }
+
   }
   
   input {
@@ -26,6 +42,8 @@ body {
     border:none;
     background:#ddd;
     border-radius:8px;
+    font-size: 18px;
+    font-weight: 600;
   }
   
   #calculate {
@@ -36,6 +54,7 @@ body {
     color:white;
     text-transform:uppercase;
     transition: all 0.2s ease;
+    font-size: 18px;
     
   }
   
