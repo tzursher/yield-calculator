@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="calc-container" >
+        <h2>Yield Calculator</h2>
+        <label for="amount"> Amount Invested </label>
+        <input type="number" name="amount" id="amount" value="0"></input>
+        <label for="amount"> Avg. Monthly Yield (%) </label>
+        <input type="number" step="0.1" name="yield" id="yield" value="0"> </input>
+      <!-- <label for="amount"> For how many years </label>
+        <input type="number" name="years" id="years" value="1"> </input> -->
+        <button type="button" id="calculate">Calculate</button>
+      </div>
+      
+      <div class="calc-container flex-row">
+        <div class="column">
+          <h4>Yearly Profit:</h4>
+          <p id="balance">--</p>
+        </div>
+        
+        <div class="column">
+          <h4>Yearly yield:</h4>
+          <p id="profit">--</p>
+        </div>
+      </div>
+</body>
+</html>
