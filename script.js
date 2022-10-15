@@ -11,7 +11,7 @@ let amountNum = 0;
 let yieldNum = 0;
 
 function updateAmount() {
-  amountNum = parseInt(amountInput.value);
+  amountNum = amountInput.value;
   console.log("amount updated", amountNum);
 };
 
@@ -30,10 +30,10 @@ function calc() {
     console.log(newResult);
   }
   yieldResultText.innerText = Math.floor((newResult/amountNum-1) * 100)+"%";
-  balanceResultText.innerText = Math.round(newResult-amountNum)+"$";
+  balanceResultText.innerText = Intl.NumberFormat('en-US').format(Math.round(newResult-amountNum))+"$";
  
 };
 
-amountInput.addEventListener('change', updateAmount);
-yieldInput.addEventListener('change', updateYield);
+amountInput.addEventListener('keyup', updateAmount);
+yieldInput.addEventListener('keyup', updateYield);
 btn.addEventListener('click', calc);
